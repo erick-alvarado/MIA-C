@@ -5,6 +5,8 @@ const path = require('path');
 const mysql = require('mysql');
 const myConnection = require('express-myconnection');
 
+//importando rutas
+const hospitalRoutes = require('./routes/hospital');
 
 const app = express();
 
@@ -24,6 +26,11 @@ app.use(myConnection(mysql,{
 }, 'single'));
 
 //routes
+app.use('/',hospitalRoutes);
+
+
+//static files
+app.use(express.static(path.join(__dirname,'public')));
 
 
 app.listen(app.get('port'),()=>{
