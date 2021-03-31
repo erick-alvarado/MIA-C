@@ -77,3 +77,4 @@ create table IF NOT EXISTS contacto(
 
     FOREIGN KEY (id_detalle_asociado) REFERENCES detalle_asociado(id_detalle_asociado) ON DELETE CASCADE
 );
+
