@@ -22,7 +22,8 @@ app.use(myConnection(mysql,{
     user: 'root',
     password: 'password',
     port: 3306,
-    database: 'corona'
+    database: 'corona',
+    localinfile: 1
 }, 'single'));
 
 //routes

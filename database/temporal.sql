@@ -1,5 +1,4 @@
 create TEMPORARY table IF NOT EXISTS temporal(
-    id_temporal INTEGER NOT NULL AUTO_INCREMENT,
     nombre_victima VARCHAR(30),
     apellido_victima VARCHAR(30),
     direccion_victima VARCHAR(30),
@@ -22,6 +21,5 @@ create TEMPORARY table IF NOT EXISTS temporal(
     efectividad TINYINT,
     fecha_inicio_tratamiento DATETIME,
     fecha_fin_tratamiento DATETIME,
-    efectividad_victima TINYINT,
-    PRIMARY KEY(id_temporal)
+    efectividad_victima TINYINT
 );
